@@ -27,7 +27,7 @@
 # Pero se ejecuta en la terminal de tu computadora, no en Jupyter Notebook.
 # OJO: Debes antes tener instalado Streamlit en tu computadora, debes antes definir la ruta de tus archivos y 
 ##     tener un script de Python (your_script.py) que quieras ejecutar en Streamlit.
-#  streamlit run your_script.py o python -m streamlit run your_script.py
+#  streamlit run your_script.py o 'python -m streamlit run your_script.py''''
 
 # Este código sirve para hacer un primer programa en Streamlit.
 import streamlit as st
@@ -40,7 +40,7 @@ sidebar = st.sidebar
 # Pero, a diferencia de st.markdown, el texto estará alineado a la izquierda y no podrás cambiar el color del texto.
 
 # La función st.markdown permite centrar y agrandar la letra del título de la web en Streamlit.
-st.markdown("<h1 style='text-align: center;'>Aquí escribe un nombre creativo para tu blog</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>Mi blog Pensmiento computacional 2024-2</h1>", unsafe_allow_html=True)
 
 # <h1 style='text-align: center;'>Nombre de tu blog</h1>: Esto es una cadena de código HTML. 
 # La etiqueta <h1> se utiliza para el encabezado principal de una página web, y 
@@ -60,7 +60,7 @@ col1, col2 = st.columns(2)
 # Las columnas creadas se asignan a las variables col1 y col2.
 
 # En la primera columna colocamos la imagen
-col1.image("ellie.png", caption='Aquí puedes escribir una tiqueta debajo de la imagen', width=300)
+col1.image("IMG_20230223_212341.jpg", caption='Imagen referencial', width=300)
 
 # col1.image("ellie.png", caption='Ellie', width=300): Esta línea está colocando una imagen en la primera columna (col1). 
 # La función image toma como primer argumento la ruta de la imagen que se va a mostrar. 
@@ -73,7 +73,8 @@ col1.image("ellie.png", caption='Aquí puedes escribir una tiqueta debajo de la 
 # ¿Qué te gustaría hacer en el futuro?, ¿Qué te gusta hacer en tu tiempo libre?
 
 texto = """
-Aquí escribe una presentación creativa sobre ti.
+Soy Eduardo Cespedes, estudiante de la universidad católica del Perú, estudio Comunicación Audiovisual en la facultad de Ciencias y Artes de la Comunicación. Lo que más me gusta de mi carrera es el potencial casi ilimitado de creación de producciones audiovisuales, las variadas historias que uno puede contar en sus diferentes elementos como publicidades, cortometrajes, largometrajes, historias cortas, contenidos en redes sociales, por otra parte los elementos como cámaras de vídeo, kits de filmación y la variabilidad de las filmaciones ya que uno puede grabar un producto audiovisual desde lugares como una casa hasta en el mismo espacio, en el futuro me gustaría llevar tanto mis aficiones profesionales como las personales como lo es el periodismo deportivo documental, formar parte en proyectos audiovisuales de carácter deportivo o en su defecto formar una productora local. En mis tiempos libres practico deporte, participo en todo tipo de actividad deportiva que haya tanto dentro como fuera de mi universidad, por otro lado gestiono proyectos personales los cuales tienen estrecha relación con los deportes electrónicos (E-sports) mientras que por el mismo lado compito en algunas competencias de este nicho, finalmente cuando no hay nada que hacer me dedico a crear contenido en redes sociales por mero entretenimiento.
+
 """
 
 # Las comillas triples (""") en Python se utilizan para definir cadenas multilínea.
@@ -109,7 +110,7 @@ st.markdown("<h2 style='text-align: center;'>Mi experiencia aprendiendo a progra
 
 # Agregar un  texto para la respuesta
 texto_2 = """
-Aquí escribe tu experiencia aprendiendo a programar. 
+En mi caso he tenido ligeras experiencias con los códigos java y java.script así como C y C++ por lo que de manera directa por primera Pyton es el lenguaje de programación 
 """
 
 # Mostramos el texto
@@ -159,7 +160,7 @@ sidebar.markdown("<h1 style='text-align: center;'>Aquí escribe un nombre creati
 # El texto dentro de las etiquetas <h1> ("Los análisis de Ellie") es el contenido del encabezado.
 
 # Creamos una lista de gráficos
-graficos = ['Lenguas aisladas', 'Familias lingüísticas', 'Mapa de las lenguas sudamericanas']
+graficos = ['Conteo de palabras', 'Goles Milan']
 
 # Creamos un cuadro de selección en la barra lateral
 grafico_seleccionado = sidebar.selectbox('Selecciona un gráfico', graficos)
@@ -172,18 +173,18 @@ grafico_seleccionado = sidebar.selectbox('Selecciona un gráfico', graficos)
 # La función selectbox se utiliza para crear un cuadro de selección en la barra lateral.
 
 # Mostramos el gráfico seleccionado
-if grafico_seleccionado == 'Lenguas aisladas':
+if grafico_seleccionado == 'Conteo de palabras':
     sidebar.markdown("<div style='text-align: justify; font-size: 20px;'>Aquí debe ir una breve interpretación de tu gráfico</div>", unsafe_allow_html=True)
-    sidebar.image("aisladas_base_datos.png", caption='Lenguas aisladas', width=500)
+    sidebar.image("Conteo de palabras.png", caption='Conteo de palabras', width=500)
     pass
-elif grafico_seleccionado == 'Familias lingüísticas':
+elif grafico_seleccionado == 'Goles Millan':
     sidebar.markdown("<div style='text-align: justify'>Texto para la opción 2.</div>", unsafe_allow_html=True)
-    sidebar.image("lengua_familia_GB.png", caption='Familias lingüísticas', width=500)
+    sidebar.image("Goles Milan local visitante.png", caption='Goles Milan', width=500)
     pass
-elif grafico_seleccionado == 'Mapa de las lenguas sudamericanas':
-    sidebar.markdown("<div style='text-align: justify'>Texto para la opción 3.</div>", unsafe_allow_html=True)
-    sidebar.image("mapa_familias_aisladas_S.jpg", caption='Mapa de las lenguas sudamericanas', width=500)
-    pass
+#elif grafico_seleccionado == 'Mapa de las lenguas sudamericanas':
+#sidebar.markdown("<div style='text-align: justify'>Texto para la opción 3.</div>", unsafe_allow_html=True)
+#sidebar.image("mapa_familias_aisladas_S.jpg", caption='Mapa de las lenguas sudamericanas', width=500)
+#pass
 
 # if grafico_seleccionado == 'Gráfico de Macroareas': Esta línea verifica si la opción seleccionada es 'Gráfico de Macroareas'.
 # Si es así, se ejecuta el código dentro del bloque if.
